@@ -1,15 +1,64 @@
 
-function newProposalInEther(){
+	function previewHash(hash){
+		var fileHash = hash;
+        var preview = document.querySelector('img');
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+               // Typical action to be performed when the document is ready:
+                preview.src = xhttp.responseText;
+            }
+        };
+        xhttp.open("GET", "http://swarm-gateways.net/bzz:/" + hash, true);
+        xhttp.send();
+        //new proposal in ether
 
-      var beneficiary=document.getElementById("beneficiary").value;
-      var etherAmount=document.getElementById("etherAmount").value;
-      var jobDescription=document.getElementById("jobDescription").value;
-      var transactionBytecode=document.getElementById("transactionBytecode").value;
+     	 	var beneficiary=document.getElementById("beneficiary").value;
+      		var etherAmount=document.getElementById("etherAmount").value;
+      		var jobDescription=document.getElementById("jobDescription").value;
+      		var transactionBytecode=document.getElementById("transactionBytecode").value;
+		
+		    var myTokenContract = web3.eth.contract(abi).at(address);
+      		return myTokenContract.newProposalInEther(beneficiary, etherAmount, jobDescription, fileHash, transactionBytecode, function (error, result) {})
 
-      var myTokenContract = web3.eth.contract(abi).at(address);
-      return myTokenContract.newProposalInEther(beneficiary, etherAmount, jobDescription, transactionBytecode, function (error, result) {})
-
+    
     }
+
+    function uploadToSwarm() {
+      var preview = document.querySelector('img');
+      var file    = document.querySelector('input[type=file]').files[0];
+      var reader  = new FileReader();
+
+      reader.addEventListener("load", function () {
+        //preview.src = reader.result;
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://swarm-gateways.net/bzz:/", true);
+        xhr.setRequestHeader('Content-Type', 'text/plain');
+        xhr.send(reader.result);
+        xhr.onload = function() {
+          hash = this.responseText;
+          // console.log(hash);
+          previewHash(hash);
+        }
+      }, false);
+
+      if (file) {
+        reader.readAsDataURL(file);
+      }
+    }
+
+
+// function newProposalInEther(){
+
+//       var beneficiary=document.getElementById("beneficiary").value;
+//       var etherAmount=document.getElementById("etherAmount").value;
+//       var jobDescription=document.getElementById("jobDescription").value;
+//       var transactionBytecode=document.getElementById("transactionBytecode").value;
+
+//       var myTokenContract = web3.eth.contract(abi).at(address);
+//       return myTokenContract.newProposalInEther(beneficiary, etherAmount, jobDescription,  transactionBytecode, function (error, result) {})
+
+//     }
 
 
 function executeProposal(proposalNumberValue){
@@ -53,6 +102,7 @@ function getProposals(){
 	for(var i = 0; i < totalProposals; i++){
 		const proposalNumber = i;
 	 	myTokenContract.proposals(i, function(error,result){
+		console.log(result);
 
 		var a1 = '<div class="proposalCard";><font face="Arial"><p>';
 		var recipient = result[0];
@@ -74,9 +124,9 @@ function getProposals(){
 		var a3 = '<br><p><b>Proposal No.:</b> ';
 		
 		var a4 = '</p><p align="right"><b>Votes</b>&nbsp&nbsp: Total Votes: ';
-		var totalVotes = result[6].c[0];
+		var totalVotes = result[7].c[0];
 		var a5 = '&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCurrent Status: ';
-		var currentStatus = result[7].c[0];
+		var currentStatus = result[8].c[0] * result[8].s;
 		var a6 = '</p></font></div><BR>';
 
 		var input = a1+recipient+a2+proposalNumber+a21+message+voteButton1+proposalNumber+voteButton2+proposalNumber+voteButton3+proposalNumber+voteButton4+proposalNumber+voteButton5+a3+proposalNumber+a4+totalVotes+a5+currentStatus+a6;
