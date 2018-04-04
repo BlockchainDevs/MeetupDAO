@@ -2,25 +2,18 @@
 Open **https://github.com/BlockchainDevs/MeetupDAO**
 
 Clone or download as follows
-> **clone git https://github.com/BlockchainDevs/MeetupDAO.git**
+> **git clone https://github.com/BlockchainDevs/MeetupDAO.git**
 
 **Download npm nodejs server**
-1. Update your local package index:
-> sudo apt-get update
-
-2. Install Node.js:
-> sudo apt-get install nodejs
-
-3. You will also want to install NPM, which lets you easily manage your different Node.js packages.
->sudo apt-get install npm
+> <https://nodejs.org/en/download/package-manager/>
 
 Navigate through the folders as follows
 meetupdao --> UI/web3 --> open index.html
 
 Run index.html on the npm server.
-Add metamask extension to you browser ** https://metamask.io/ ** and create your account.
+Add metamask extension to you browser <https://metamask.io/> and create your account.
 
-Switch to Rinkeby Test Network and get some ethers from **https://faucet.rinkeby.io/**
+Switch to Rinkeby Test Network and get some ethers from <https://faucet.rinkeby.io/>
 Run index.html on your local server, click on **JOIN DAO** tab displayed in the menu bar.
 Enter your name in the text box and click on Join DAO button. (Make sure that your are logged in to rinkeby test network)
 Wait for a while so that your name can be displayed on the member's page
