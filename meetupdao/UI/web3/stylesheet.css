@@ -1,0 +1,54 @@
+.proposalCard {
+    			box-shadow: 4px 4px 8px 4px rgba(0,0,0,0.2);
+    			transition: 0.3s;
+    			width: 40%;
+    			margin-left: 5%; 
+    			margin-right: 5% ;
+    			background-color: white; 
+    			padding-top: 30px;
+    			padding-bottom: 30px; 
+    			padding-left: 40px;
+    			padding-right: 50px; 
+    			width: 80%;
+			}
+
+			.proposalCard:hover {
+			    box-shadow: 8px 8px 16px 8px rgba(0,0,0,0.2);
+			}
+			
+			.container {
+			    padding: 2px 16px;
+			}
+
+
+.card{
+    box-shadow: 4px 4px 8px 4px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    float: left;
+    margin-left: 2%;
+    margin-right: 2%; 
+    margin-bottom: 2%; 
+    background-color: white; 
+    padding-top: 30px;
+    padding-bottom: 30px; 
+    padding-left: 20px;
+    padding-right: 20px; 
+    width: 18%;
+}
+
+.card:hover {
+    box-shadow: 8px 8px 16px 8px rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+.clearfix::after {
+       content: "";
+    clear: both;
+    display: table;
+}
+
+
+
