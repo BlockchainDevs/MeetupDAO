@@ -18,8 +18,8 @@
       
       var file    = document.querySelector('input[type=file]').files[0];
       if (file != undefined) {
-            //file = "";
-      
+            file = "";
+      }
       var reader  = new FileReader();
 
       reader.addEventListener("load", function () {
@@ -35,7 +35,7 @@
           //new proposal in ether
 
           var fileHash = String(hash);
-        }
+        
           var beneficiary = document.getElementById("beneficiary").value;
           var etherAmount = document.getElementById("etherAmount").value;
           var jobDescription = document.getElementById("jobDescription").value;

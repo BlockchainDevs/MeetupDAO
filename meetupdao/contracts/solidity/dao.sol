@@ -207,19 +207,24 @@ contract BlockchainDevs is owned, tokenRecipient {
         uint weiAmount,
         string jobDescription,
         string uploadFileHash,
+        uint minutesForVoting,
         bytes transactionBytecode
     )
         onlyMembers public
         returns (uint proposalID)
     {
+        if (minutesForVoting == 0) {
+           minutesForVoting = debatingPeriodInMinutes;
+        }
+
         proposalID = proposals.length++;
         Proposal storage p = proposals[proposalID];
         p.recipient = beneficiary;
         p.amount = weiAmount;
         p.description = jobDescription;
         p.fileHash = uploadFileHash;
+        p.votingDeadline = now + minutesForVoting * 1 minutes;
         p.proposalHash = keccak256(beneficiary, weiAmount, transactionBytecode);
-        p.votingDeadline = now + debatingPeriodInMinutes * 1 minutes;
         p.executed = false;
         p.proposalPassed = false;
         p.numberOfVotes = 0;
@@ -245,12 +250,13 @@ contract BlockchainDevs is owned, tokenRecipient {
         uint etherAmount,
         string jobDescription,
         string uploadFileHash,
+        uint minutesForVoting,
         bytes transactionBytecode
     )
         onlyMembers public
         returns (uint proposalID)
     {
-        return newProposal(beneficiary, etherAmount * 1 ether, jobDescription, uploadFileHash, transactionBytecode);
+        return newProposal(beneficiary, etherAmount * 1 ether, jobDescription, uploadFileHash, minutesForVoting, transactionBytecode);
     }
 
     /**
