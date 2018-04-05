@@ -126,8 +126,14 @@ function getProposals(){
 		var a4 = '</p><p align="right"><b>Votes</b>&nbsp&nbsp: Total Votes: ';
 		var totalVotes = result[7].c[0];
 		var a5 = '&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCurrent Status: ';
-		var currentStatus = result[8].c[0] * result[8].s;
+    // var currentStatus = result[8].c[0] * result[8].s;
+
+		var currentStatus = result[7].c[0];
 		var a6 = '</p></font></div><BR>';
+
+    if (result[7].s < 0) {
+        currentStatus = -currentStatus;
+    }
 
 		var input = a1+recipient+a2+proposalNumber+a21+message+voteButton1+proposalNumber+voteButton2+proposalNumber+voteButton3+proposalNumber+voteButton4+proposalNumber+voteButton5+a3+proposalNumber+a4+totalVotes+a5+currentStatus+a6;
 		var mydiv = document.getElementById("parent");
