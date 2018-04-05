@@ -124,7 +124,7 @@ function getProposals(){
 		var a3 = '<br><p><b>Proposal No.:</b> ';
 		
 		var a4 = '</p><p align="right"><b>Votes</b>&nbsp&nbsp: Total Votes: ';
-		var totalVotes = result[7].c[0];
+		var totalVotes = result[6].c[0];
 		var a5 = '&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCurrent Status: ';
     // var currentStatus = result[8].c[0] * result[8].s;
 
