@@ -5,26 +5,48 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>		
+
+		<style type="text/css">
+			dialog{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+		</style>
+
 	</head>
 
 	<body bgcolor="#E6E6FA">
+ 
+		<!-- ////////////////////////////////////// -->
 		<div style="float: left; padding-left: 70px;">
 			<h1>PROPOSALS</h1>
 		</div>
-		
+		<div>
+			<dialog id="window">  
+		    <!-- <h3>Sample Dialog!</h3>   -->
+		    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, inventore!</p> -->
+		    <img id="img" src="" alt="Wait for the image to load..." width="304" height="228">  
+		    <button id="exit">Close Dialog  
+			</dialog>
+		</div>
 		<div style="float:right; margin-left: 5%;margin-right: 5% ;z-index: 1000;padding-top: 10px;padding-left: 40px;padding-right: 50px;">
-	
+		  
 		<a href="#newProposalInEther" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">New Proposal</a>
     
     		<div data-role="popup" id="newProposalInEther" class="ui-content" style="min-width:250px;">
       			<form>
         			<div>
           				<h3>New Proposal</h3>
-          				Beneficiary<br>
+          				Beneficiary Address(optional)<br>
           				<input type="text" name="beneficiary" id="beneficiary" placeholder="0x123456..."><br>
           				Ether amount(optional)<br>
           				<input type="text" name="etherAmount" id="etherAmount" placeholder="1234"><br>
-          				Job Description<br>
+          				Proposal Description<br>
           				<input type="text" name="jobDescription" id="jobDescription" placeholder="MyString"><br>
           				Transaction bytecode(optional)<br>
           				<input type="text" name="transactionBytecode" id="transactionBytecode" placeholder="0x1234af..."><br>
