@@ -1,0 +1,367 @@
+body{
+  overflow-x: hidden;
+}
+
+h3{
+  font-family: 'Bitter', serif;
+}
+
+p{
+  font-family: 'Gothic A1', sans-serif;
+}
+
+
+.brand-header{
+  background-color: rgb(63, 45, 115, 0.55);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../img/back.jpeg);
+  background-attachment: fixed;
+  height : 720px !important;
+  background-blend-mode: multiply;
+  background-color: rgba(63, 19, 107, 0.76);
+  overflow: hidden;
+
+}
+
+
+
+.header-1 {
+  position: absolute;
+  top : 32%;
+  color : #fff;
+}
+
+
+.header-1 h3 {
+  font-size: 50px;
+  font-weight: 600;
+  animation: type 8s steps(31) ;
+  overflow : hidden;
+  white-space: nowrap;
+  border-right : 2px solid #fff;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+@keyframes type {
+  0% {
+    width : 0ch;
+  }
+  100% {
+    width : 31ch;
+  }
+}
+
+.header-1 p{
+  font-size: 25px;
+  text-align: left;
+  word-spacing: 5px;
+}
+
+.header-1 .btn-1 {
+  width : 200px;
+  height : 58px;
+  margin-top: 10px;
+  font-size: 16px;
+  background-color: transparent;
+  border : 1px solid whitesmoke;
+
+}
+
+
+.header-1 .btn-2 {
+  width : 200px;
+  height : 58px;
+  margin-top: 10px;
+  font-size: 16px;
+  background-color: transparent;
+  border : 1px solid whitesmoke;
+  background-color: rgba(0, 0, 10, 0.86);
+  color : #fff;
+  margin-left: 8px;
+}
+
+
+/* ================== navbar ========= */
+
+
+
+
+
+
+.nav-extended {
+  background-color: rgba(0, 0, 10, 0.36);
+  color : #fff !important;
+
+}
+
+
+.nav-extended a {
+  color : #fff;
+  transition: all 300ms ease;
+}
+
+.nav-extended a:hover{
+  border-bottom: 2px solid #fff;
+  background-color: #1a237e;
+}
+
+.brand-logo{
+  font-size: 22px !important;
+}
+
+.brand-logo:hover {
+  border-bottom : none !important;
+  background-color: transparent !important;
+}
+
+.button-collapse{
+  border-bottom : none !important;
+  background-color: transparent !important;
+}
+
+.side-nav {
+  background-color: #fff !important;
+}
+
+.side-nav a:hover{
+  border-bottom: none;
+  background-color: rgb(29, 5, 43) !important;
+  color: #fff;
+
+}
+
+/* =========================== what is doa ======================== */
+
+.whatIsDao{
+  margin-top: 40px !important;
+  padding: 10px 10px;
+  background-color: #fff;
+}
+
+.header-2 h3{
+  text-align: left;
+  font-weight: 600;
+  font-size: 25px;
+  padding-left: 10px;
+}
+
+.info-col p{
+  text-align: left;
+  font-size: 15px;
+  opacity: 0.8;
+  line-height: 1.7;
+}
+
+/* ======================== How its works  ================================= */
+
+.HowItWork{
+  margin-top: 20px !important;
+  padding: 10px 10px;
+  background-color: #fff;
+  margin-bottom: 60px;
+}
+
+.header-3 h3{
+  text-align: left;
+  font-weight: 600;
+  font-size: 25px;
+  padding: 10px 0;
+  padding-left: 10px;
+}
+
+
+
+/* ============================== parallax ======================== */
+
+.parallax-header{
+  background-color: rgba(0, 0, 0, 0.76);
+}
+
+.parallax-container{
+  height : 450px !important;
+}
+
+.parallax-container .container{
+  text-align: center;
+  color : #fff;
+}
+
+.content{
+  padding: 30px 10px;
+  margin-top: 100px;
+
+}
+
+.parallax-container .content h3{
+
+  font-size: 40px;
+  font-weight: 600;
+  word-spacing: 10px;
+}
+
+.parallax-container .content p{
+  font-size: 17px;
+  font-weight: 400;
+  opacity: 0.6;
+
+}
+
+.parallax-container .content .border-1{
+  border: 2px solid #fff;
+  width : 300px;
+  margin: 0px auto;
+  margin-top: 30px !important;
+}
+
+
+/* =========================== Feature ================================== */
+
+.feature{
+  padding: 30px 10px;
+  margin-top: 60px;
+  margin: 30px 0;
+}
+
+.header-4 h3{
+  text-align: left;
+  font-weight: 600;
+  font-size: 25px;
+
+}
+
+.header-4 p{
+  text-align: left;
+  font-size: 14px;
+
+  opacity: 0.6;
+  line-height: 2;
+}
+
+.card{
+  margin-top:30px !important;
+}
+
+.card .btn-floating{
+  background-color: rgb(94, 2, 131) !important;
+}
+
+.card:hover{
+  -webkit-box-shadow: 0px 0px 30px -1px rgba(0,0,0,0.51);
+-moz-box-shadow: 0px 0px 30px -1px rgba(0,0,0,0.51);
+box-shadow: 0px 0px 30px -1px rgba(0,0,0,0.51);
+}
+
+
+
+
+/* ===================================== Contact us ==================== */
+
+.contact-us{
+  padding: 60px 10px !important;
+  padding-bottom : 20px !important;
+  margin: 20px 0;
+  margin-bottom: 0;
+  background: linear-gradient(132deg, #000, #7a0d63);
+  background-size: 400% 400%;
+  animation: BackgroundGradient 25s ease infinite;
+  position: relative;
+
+}
+
+
+@keyframes BackgroundGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.header-5 h3{
+
+  font-weight: 600;
+  font-size: 40px;
+  padding-left: 10px;
+  color: #fff;
+  text-align: center;
+
+}
+
+.form-content{
+  margin-top: 40px;
+  padding: 30px;
+  color: #fff;
+}
+
+.form-content span{
+  font-size: 15px;
+  opacity: 0.6;
+}
+
+.form-content .material-icons{
+  font-size: 45px !important;
+  color: #42a5f5  !important;
+}
+
+.form-content strong p{
+  font-size: 17px;
+}
+
+.form-input{
+  margin-top: 20px !important;
+  padding: 0px 30px;
+}
+
+.input-field input{
+  color : #fff;
+}
+
+
+
+
+.input-field .active{
+  color : #42a5f5 !important;
+}
+
+.form-input .btn{
+  background-color : #42a5f5 !important;
+  margin-left: 10px;
+  margin-top: 20px;
+  border-radius: 50px;
+}
+
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=url]:not(.browser-default):focus:not([readonly]),
+input[type=time]:not(.browser-default):focus:not([readonly]),
+input[type=date]:not(.browser-default):focus:not([readonly]),
+input[type=datetime]:not(.browser-default):focus:not([readonly]),
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]),
+input[type=number]:not(.browser-default):focus:not([readonly]),
+input[type=search]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #42a5f5 !important;
+
+}
+
+
+/* ======================== footer ============================ */
+
+.footer{
+  padding: 20px 0;
+  text-align: center;
+  color: #fff;
+  background-color: rgb(42, 4, 38);
+  font-size: 13px;
+
+}

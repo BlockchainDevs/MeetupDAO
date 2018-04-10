@@ -1,0 +1,289 @@
+@media (max-width: 1287px) {
+  .header-1 h3 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 880px) {
+  .brand-header {
+    height: 580px !important;
+  }
+  .header-1 {
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 0%;
+    right: 0%;
+  }
+  .header-1 h3 {
+    font-size: 25px;
+    animation: none;
+    white-space: normal;
+    border: none;
+    line-height: 2;
+  }
+  .header-1 p {
+    font-size: 20px;
+    text-align: center;
+  }
+  .header-1 .btn-1 {
+    width: 58%;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 15px;
+    display: block;
+    position: relative;
+    right: 21%;
+    left: 21%;
+  }
+  .header-1 .btn-2 {
+    width: 50%;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 15px;
+    display: block;
+    position: relative;
+    right: 25%;
+    left: 25%;
+  }
+
+
+ /* home page responsive style */
+
+  .header-2 h3{
+    text-align: left;
+    font-weight: 600;
+    font-size: 20px;
+    padding-left: 10px;
+  }
+
+  .header-3 h3{
+    text-align: left;
+    font-weight: 600;
+    font-size: 20px;
+    padding-left: 10px;
+  }
+
+  .info-col p{
+    text-align: left;
+    font-size: 14px;
+    opacity: 0.8;
+    line-height: 1.8;
+  }
+
+  /* ==== Parallex ====== */
+
+  .content{
+    padding: 20px;
+    margin-top: 120px;
+  }
+
+  .parallax-container .content h3{
+    font-size: 30px;
+  }
+
+  .parallax-container .content p{
+    font-size: 15px;
+  }
+
+  /* =========== feature ====== */
+
+  .header-4 h3{
+    font-size: 20px;
+  }
+
+  .header-4 p{
+    font-size: 12px;
+  }
+
+  .header-5 h3{
+    font-weight: 600;
+    font-size: 30px;
+
+  }
+
+  /* ===== form ====== */
+
+  .form-content strong p{
+    font-size: 14px;
+  }
+
+
+  .form-content .material-icons{
+    font-size: 40px !important;
+
+  }
+}
+
+/* ===================== Proposal ====================== */
+
+@media (max-width: 1005px) {
+  .step-1 .header p {
+    line-height: 1.6 !important;
+    font-size: 15px;
+    opacity: 0.6;
+  }
+  .step-2 .header-2 p {
+    line-height: 1.6 !important;
+    font-size: 15px;
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 992px) {
+  .step-1 {
+    padding: 5% !important;
+    height: 500px;
+    margin: 10px 0;
+  }
+  .step-1 .header p {
+    line-height: 1.6 !important;
+    font-size: 15px;
+    opacity: 0.6;
+  }
+  .step1-img img {
+    width: 90%;
+    height: 100%;
+    position: relative;
+    left: 5%;
+    right: 5%;
+    margin: 30px 0;
+  }
+  .step-2 {
+    padding: 5% !important;
+    height: 500px;
+    margin: 30px 0;
+  }
+  .step-2 .header p {
+    line-height: 1.6 !important;
+    font-size: 15px;
+    opacity: 0.6;
+  }
+  .step2-img img {
+    width: 90%;
+    height: 100%;
+    position: relative;
+    left: 5%;
+    right: 5%;
+    margin: 80px 0;
+  }
+  span .material-icons {
+    display: none !important;
+  }
+  /* ======= join us button ======== */
+  .button-1 a {
+    top: 20px;
+  }
+}
+
+@media (max-width: 604px) {
+  .proposal {
+    padding: 20px;
+
+  }
+  .proposal-2 {
+    padding: 20px;
+  }
+  .step-1 {
+    margin: 30px 0;
+    position: relative;
+    top: -30% !important;
+    bottom: 20px;
+    height: 450px;
+    padding: 5% 8% !important;
+  }
+  .step1-img {
+    padding: 20px 4px !important;
+  }
+  .step1-img img {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    left: 0;
+    right: 0;
+  }
+  .step-2 {
+    margin: 30px 0;
+    margin-bottom: 0px !important;
+    position: relative;
+    top: 0px !important;
+    bottom: 0px;
+    height: 450px;
+    padding: 5% 8% !important;
+  }
+  .step2-img {
+    padding: 20px 4px !important;
+  }
+  .step2-img img {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-top: -10px;
+    margin-bottom: 40px;
+  }
+
+  /* ====== respo =====   */
+  span .material-icons {
+    display: none !important;
+  }
+  /* ===== join us button =====  */
+  .button-1 a {
+    top: 20px;
+  }
+
+  /* ====== home ===== */
+
+  .content{
+    padding: 30px 10px;
+    margin-top: 70px;
+
+  }
+
+  .parallax-container .content .border-1{
+    width : 200px;
+    margin-top: 20px !important;
+  }
+
+  .parallax-container .content h3{
+
+    font-size: 25px;
+    font-weight: 600;
+    word-spacing: 10px;
+    line-height: 1.7;
+  }
+
+  .parallax-container .content p{
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.6;
+
+  }
+
+  /* ====== contact form home page === */
+
+  .form-input {
+    margin-top: 60px !important;
+  }
+
+  .form-input .btn{
+    margin-left: 0px;
+  }
+}
+
+
+@media (max-width : 455px) {
+  .header-1 .btn-1 {
+    width: 80%;
+    left: 10%;
+    right: 10%;
+  }
+  .header-1 .btn-2 {
+    width: 80%;
+    height: 40px;
+    left: 10%;
+    right: 10%;
+    margin-left: 0px;
+  }
+}

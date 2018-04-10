@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bitter|Gothic+A1|IBM+Plex+Mono" rel="stylesheet">
+
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!--Import js files-->
+  <script type="text/javascript" src="./abi.js"></script>
+  <script type="text/javascript"> 
+    function becomeMember(){
+      var memberName= prompt("Enter Your Name here! ");
+      // var memberName = prompt("Enter Name");
+      var myTokenContract = web3.eth.contract(abi).at(address);
+      console.log(myTokenContract);
+      return myTokenContract.becomeMember(memberName, function (error, result) {})
+     
+      }
+    </script>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+  <!-- navbar section -->
+
+
+  <!-- end of the navbar section -->
+
+  <!-- start of the header section  -->
+  <section class="brand-header">
+    <!--Main container -->
+    <div id="particles-js">
+      <nav class="nav-extended">
+        <div class="nav-wrapper container">
+          <a href="#" class="brand-logo">DAO</a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse "><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Roadmaps</a></li>
+            <li><a href="./stepProposal.html">Proposals</a></li>
+            <li><a href="./members.html">Members</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li><a href="./index1.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Roadmaps</a></li>
+            <li><a href="./stepProposal.html">Proposals</a></li>
+            <li><a href="./members.html">Members</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <div class="header-1">
+              <p>Not Long to Go ...</p>
+              <h3 class="type">Build a Community on Blockchain.</h3>
+              <button type="button" class="waves-effect waves-light btn btn-1 lighten-1 z-depth-4" onclick="becomeMember();">Join Us</button>
+              
+              <button type="button" class="waves-effect waves-light btn btn-2 lighten-1 z-depth-4">Lear more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- end of the header section -->
+
+  <!-- start of the secton what is dao  -->
+
+  <section class="whatIsDao">
+    <div class="container">
+      <div class="row">
+        <div class="header-2">
+          <h3>WHAT IS DAO</h3>
+        </div>
+        <div class="col s12 info-col">
+          <p>In the Ethereum ecosystem, there is no discrimination against robots or humans and contracts can create arbitrary actions like any other account would. Contracts can own tokens, participate in crowdsales, and even be voting members of other
+            contracts. DAO is a business or organization whose decisions are made electronically by a written computer code or through the vote of its members. In essence it is a system of hard coded rules that define which actions an organization will
+            take</p>
+          <p>DAOs aim to hard-code certain rules that a company would from the get-go. This could be setting aside a certain percentage of earnings for a cause or determining a process by which such a rule could be changed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- End of the section what is dao -->
+
+
+  <!-- start of the secton How its Work  -->
+
+  <section class="HowItWork">
+    <div class="container">
+      <div class="row">
+        <div class="header-3">
+          <h3>HOW THIS DAO WORKS</h3>
+        </div>
+        <div class="col s12 info-col foo">
+          <p>The way this particular democracy works is that it has an Owner which works like an administrator, CEO or a President. The Owner can add (or remove) voting members to the organization. Any member can make a proposal, which is in the form of
+            an ethereum transaction to either send ether or execute some contract, and other members can vote in support or against the proposal. Once a predetermined amount of time and a certain number of members has voted, the proposal can be executed:
+            the contract counts the votes and if there are enough votes it will execute the given transaction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- End of the section How its Work -->
+
+
+  <section class="parallax-header">
+    <!--Main container -->
+    <div class="parallax-container">
+      <div class="parallax"><img src="img/back3.jpeg"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <div class="content">
+              <h3>Build Future With Blockchain</h3>
+              <p> Demo text Something will add here soon!.</p>
+              <div class="border-1"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- End os the section Parallex effect  -->
+
+  <!-- start of the section Features  -->
+  <section class="feature">
+    <!-- Our Works -->
+    <div class="container">
+      <div class="header-4">
+        <h3>FEATURES</h3>
+        <p>Something will add here soon !</p>
+      </div>
+      <div class="row">
+        <div class="col s12 m4 l4">
+          <div class="card card-1">
+            <div class="card-image">
+              <img src="img/feature.jpeg">
+              <span class="card-title">Card Title</span>
+              <a class="btn-floating halfway-fab waves-effect waves-light"><i class="material-icons">add</i></a>
+            </div>
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="col s12 m4 l4">
+          <div class="card card-2">
+            <div class="card-image">
+              <img src="img/feature.jpeg">
+              <span class="card-title">Card Title</span>
+              <a class="btn-floating halfway-fab waves-effect waves-light "><i class="material-icons">add</i></a>
+            </div>
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4 l4">
+          <div class="card card-3">
+            <div class="card-image">
+              <img src="img/feature.jpeg">
+              <span class="card-title">Card Title</span>
+              <a class="btn-floating halfway-fab waves-effect waves-light "><i class="material-icons">add</i></a>
+            </div>
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of thw Features section  -->
+
+
+  <section class="contact-us">
+    <div class="container">
+      <div class="row">
+        <div class="header-5">
+          <h3>Contact Us</h3>
+        </div>
+        <div class="col s12 m6 l5 form-content">
+
+          <span>Our Address</span>
+          <i class="material-icons left">add_location</i>
+          <strong><p>Ramanujan College, New Delhi - 110019</p></strong><br>
+
+          <span>Call Us</span>
+          <i class=" material-icons left">call</i>
+          <strong><p>+91 XXXXXXXXXX<p></strong><br>
+
+          <span>Mail Us</span>
+           <i class=" material-icons left">email</i>
+          <strong><p>meetup.gmail.com</p></strong>
+        </div>
+
+        <div class="col s12 m6 l7 form-input">
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input  id="first_name" type="text" class="validate">
+                  <label for="first_name">First Name</label>
+                </div>
+
+                <div class="input-field col s6">
+                  <input id="last_name" type="text" class="validate">
+                  <label for="last_name">Last Name</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="email" type="email" class="validate">
+                  <label for="email">Email</label>
+                </div>
+              </div>
+
+              <button class="btn waves-effect waves-light btn-large" type="submit" name="action">Submit
+               <i class="material-icons right">send</i>
+             </button>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- End of the section contact us -->
+
+<!-- start od the section footer  -->
+
+<footer class="footer">
+  <div class="container bar">
+    <p>&copy; 2018 Meetup DAO all rights reserved by</p>
+  </div>
+</footer>
+
+
+
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <script src="js/particles.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/scrollAnimation.js"></script>
+
+</body>
+
+</html>
