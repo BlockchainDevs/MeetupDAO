@@ -13,8 +13,13 @@ Run the following command in terminal
 ```
 npm install -g http-server
 ```
-Navigate through the folders as follows
-meetupdao --> UI/web3 --> open index.html
+Navigate through the folders as follows:
+```
+cd MeetupDAO
+cd UI/web3
+# Open the web page.
+open index.html
+```
 
 Open terminal in the folder where the DAO files are downloaded, and start http server by writing **http-server**
 
