@@ -48,7 +48,7 @@ contract BlockchainDevs is owned, tokenRecipient {
 
     event ProposalAdded(uint proposalID, address recipient, uint amount, string description);
     event Voted(uint proposalID, bool position, address voter, string justification);
-    event ProposalTallied(uint proposalID, int result, uint quorum, bool active);
+    event ProposalTallied(uint proposalID, int upvotes, int downvotes, uint quorum, bool active);
     event MembershipChanged(address member, bool isMember);
     event ChangeOfRules(uint newMinimumQuorum, uint newDebatingPeriodInMinutes, int newMajorityMargin);
 
@@ -339,6 +339,6 @@ contract BlockchainDevs is owned, tokenRecipient {
         }
 
         // Fire Events
-        emit ProposalTallied(proposalNumber, p.upvotedResult - p.downvotedResult, p.numberOfVotes, p.proposalPassed);
+        emit ProposalTallied(proposalNumber, p.upvotedResult, p.downvotedResult, p.numberOfVotes, p.proposalPassed);
     }
 }
