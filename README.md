@@ -18,7 +18,7 @@ meetupdao --> UI/web3 --> open index.html
 
 Open terminal in the folder where the DAO files are downloaded, and start http server by writing **http-server**
 
-You can open/run this on browser by clicking [here](http://localhost:8080) or you can simply write the below url
+You can open/run this on browser by clicking [here](http://localhost:8080) or you can copy and write the below url
 ```
 http://localhost:8080
 ```
