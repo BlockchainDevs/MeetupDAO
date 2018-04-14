@@ -1,0 +1,117 @@
+body {
+    margin : 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.main-containe{
+    margin: 10px;
+    height : 100%;
+    width : 100%;
+    position: relative;
+    left : 10%;
+    right : 10%;
+}
+.card{
+    display: inline-block;
+    width : 300px;
+    height : 250px;
+    background-color: #fff;
+    border-top : 4px solid #1a237e;
+    color : #000;
+    text-align: center;
+    margin : 10px;
+    margin-left: 25px;
+    font-size: 20px;
+    margin-top : 80px;
+    margin-bottom : 60px;
+    -webkit-box-shadow: 0px 6px 26px 1px rgba(0,0,0,0.26);
+-moz-box-shadow: 0px 6px 26px 1px rgba(0,0,0,0.26);
+box-shadow: 0px 6px 26px 1px rgba(0,0,0,0.26);
+transition: transform 300ms ease-in;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card h2{
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.header {
+    padding: 50px 0;
+    padding-left: 30px !important;
+    height : 300px;
+    background-image: url(../img/back3.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size : cover;
+
+
+}
+
+.header h3{
+    font-size : 50px;
+    text-align: left;
+    color : #fff;
+}
+
+.card p {
+    font-size: 18px;
+    opacity: 0.8;
+    margin-top: 50px;
+    word-spacing: 5px;
+}
+.nav-extended {
+background-color: rgba(0, 0, 10, 1);
+color : #fff !important;
+
+}
+
+
+.nav-extended a {
+color : #fff;
+transition: all 300ms ease;
+}
+
+.nav-extended a:hover{
+border-bottom: 2px solid #fff;
+background-color: #1a237e;
+}
+
+.brand-logo{
+font-size: 22px !important;
+}
+
+.brand-logo:hover {
+border-bottom : none !important;
+background-color: transparent !important;
+}
+
+.button-collapse{
+border-bottom : none !important;
+background-color: transparent !important;
+}
+
+.side-nav {
+background-color: #fff !important;
+}
+
+.side-nav a:hover{
+border-bottom: none;
+background-color: rgb(29, 5, 43) !important;
+color: #fff;
+
+}
+
+
+/* =========== Footer =======  */
+
+.footer{
+ padding: 10px 0;
+ color : #fff;
+ text-align: center;
+ font-size : 15px;
+ background-color: hsl(271, 70%, 21%);
+}
