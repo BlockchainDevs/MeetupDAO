@@ -115,6 +115,13 @@ contract BlockchainDevs is owned, tokenRecipient {
         return proposals.length;
     }   
 
+    function proposaltiming(uint _proposalTime, address _totalMembers) public
+    {
+        beneficiary = _totalMembers;
+        proposalEnd = now + _proposalTime;
+    }
+
+
     /**
      * Become member
      *
