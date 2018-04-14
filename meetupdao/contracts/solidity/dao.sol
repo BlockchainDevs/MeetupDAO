@@ -17,6 +17,7 @@ contract owned {
     }
 }
 
+// This is to interact with tokens generated //
 contract tokenRecipient {
     event receivedEther(address sender, uint amount);
     event receivedTokens(address _from, uint256 _value, address _token, bytes _extraData);
@@ -36,6 +37,7 @@ interface Token {
     function transferFrom(address _from, address _to, uint256 _value) external returns (bool success);
 }
 
+// Here  both contracts are inherited by BlockchainDevs // 
 contract BlockchainDevs is owned, tokenRecipient {
     // Contract Variables and events
     uint public minimumQuorum;
@@ -89,7 +91,7 @@ contract BlockchainDevs is owned, tokenRecipient {
      * Constructor function
      */
     function BlockchainDevs ()  payable public {
-        
+        // To accept ethers one should include payable keyword //
         uint minimumQuorumForProposals = 2;
         uint minutesForDebate = 5;
         int marginOfVotesForMajority = 0;
@@ -121,10 +123,10 @@ contract BlockchainDevs is owned, tokenRecipient {
      * @param memberName public name for that member
      */
     function becomeMember(string memberName) public {
-        uint id = memberId[msg.sender];
+        uint id = memberId[msg.sender]; 
         Member memory myMember = members[id];
         uint joiningTime = myMember.memberSince;
-        if (id == 0) {
+        if (id == 0) {   
             memberId[msg.sender] = members.length;
             joiningTime = now;
             id = members.length++;
