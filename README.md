@@ -30,8 +30,6 @@ Wait for a while so that your name can be displayed on the member's page
 After becoming a member, you can create a new proposal and can also vote on any of the existing proposals.
 Procedure for creating a proposal is shown there on the home page. To vote for any proposal, go to the Proposals page, search the proposal on which u want to vote, select yes or no, enter a justification text of your vote, and click the button VOTE. A metamask window will then get popped up, press submit, your vote will then be counted.
 
-This is goin to be great session.
-
 
 ## Folder View:
 ```
