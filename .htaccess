@@ -1,0 +1,4 @@
+<IfModule mod_rewrite.c>
+   RewriteEngine On 
+   RewriteRule ^(.*)$ /meetupdao/UI/web3/$1 [L]
+</IfModule>
