@@ -300,7 +300,7 @@ contract BlockchainDevs is owned, tokenRecipient {
         if (supportsProposal) {                         // If they support the proposal
             p.upvotedResult++;                          // Increase score
         } else {                                        // If they don't
-            p.downvotedResult--;                        // Decrease the score
+            p.downvotedResult++;                        // Decrease the score
         }
 
         // Create a log of this event
