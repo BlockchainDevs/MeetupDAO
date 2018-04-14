@@ -18,7 +18,10 @@ meetupdao --> UI/web3 --> open index.html
 
 Open terminal in the folder where the DAO files are downloaded, and start http server by writing **http-server**
 
-Open browser, at the place of URL write localhost:8080 and run.
+You can open/run this on browser by clicking [here](http://localhost:8080) or you can copy and write the below url
+```
+http://localhost:8080
+```
 
 Add [metamask extension](https://metamask.io/) on your browser and create your account.
 
