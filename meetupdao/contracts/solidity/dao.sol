@@ -90,10 +90,11 @@ contract BlockchainDevs is owned, tokenRecipient {
      */
     function BlockchainDevs ()  payable public {
         
-        uint minimumQuorumForProposals = 2;
-        uint minutesForDebate = 5;
+          uint minimumQuorumForProposals = 2;
+        uint minutesForDebate = new debate().value(msg.value) ;
         int marginOfVotesForMajority = 0;
-
+        
+        
         changeVotingRules(minimumQuorumForProposals, minutesForDebate, marginOfVotesForMajority);
         // It’s necessary to add an empty first member
         addMember(0, "");
