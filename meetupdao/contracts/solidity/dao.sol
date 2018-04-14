@@ -48,7 +48,7 @@ contract BlockchainDevs is owned, tokenRecipient {
 
     event ProposalAdded(uint proposalID, address recipient, uint amount, string description);
     event Voted(uint proposalID, bool position, address voter, string justification);
-    event ProposalTallied(uint proposalID, int result, uint quorum, bool active);
+    event ProposalTallied(uint proposalID, int upvotes, int downvotes, uint quorum, bool active);
     event MembershipChanged(address member, bool isMember);
     event ChangeOfRules(uint newMinimumQuorum, uint newDebatingPeriodInMinutes, int newMajorityMargin);
 
@@ -61,7 +61,8 @@ contract BlockchainDevs is owned, tokenRecipient {
         bool executed;
         bool proposalPassed;
         uint numberOfVotes;
-        int currentResult;
+        int upvotedResult;
+        int downvotedResult;
         bytes32 proposalHash;
         Vote[] votes;
         mapping (address => bool) voted;
@@ -89,7 +90,7 @@ contract BlockchainDevs is owned, tokenRecipient {
      * Constructor function
      */
     function BlockchainDevs ()  payable public {
-        
+
         uint minimumQuorumForProposals = 2;
         uint minutesForDebate = 5;
         int marginOfVotesForMajority = 0;
@@ -106,14 +107,14 @@ contract BlockchainDevs is owned, tokenRecipient {
      */
     function totalMembers() public view returns (uint){
         return members.length;
-    }   
+    }
 
     /**
      * Total Proposals
      */
     function totalProposals() public view returns (uint){
         return proposals.length;
-    }   
+    }
 
     /**
      * Become member
@@ -297,9 +298,9 @@ contract BlockchainDevs is owned, tokenRecipient {
         p.voted[msg.sender] = true;                     // Set this voter as having voted
         p.numberOfVotes++;                              // Increase the number of votes
         if (supportsProposal) {                         // If they support the proposal
-            p.currentResult++;                          // Increase score
+            p.upvotedResult++;                          // Increase score
         } else {                                        // If they don't
-            p.currentResult--;                          // Decrease the score
+            p.downvotedResult++;                        // Decrease the score
         }
 
         // Create a log of this event
@@ -325,7 +326,7 @@ contract BlockchainDevs is owned, tokenRecipient {
 
         // ...then execute result
 
-        if (p.currentResult > majorityMargin) {
+        if (p.upvotedResult - p.downvotedResult > majorityMargin) {
             // Proposal passed; execute the transaction
 
             p.executed = true; // Avoid recursive calling
@@ -338,6 +339,6 @@ contract BlockchainDevs is owned, tokenRecipient {
         }
 
         // Fire Events
-        emit ProposalTallied(proposalNumber, p.currentResult, p.numberOfVotes, p.proposalPassed);
+        emit ProposalTallied(proposalNumber, p.upvotedResult, p.downvotedResult, p.numberOfVotes, p.proposalPassed);
     }
 }
