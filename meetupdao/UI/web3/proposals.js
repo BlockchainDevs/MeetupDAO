@@ -90,9 +90,9 @@ function executeProposal(proposalNumberValue){
     var yes=document.getElementById(idYes).checked;
     var no= document.getElementById(idNo).checked;
     if(yes==true)
-      var supportsProposal = 1;
+      var supportsProposal = true;
     else if(no==true)
-      var supportsProposal = -1;
+      var supportsProposal = false;
     
     var justificationText=document.getElementById(idJustificationText).value;
 
@@ -152,7 +152,7 @@ function getProposals(){
 		var a6 = '</span></p></font></div><BR>';
 
     if (result[8].s < 0) {
-        currentStatus = -currentStatus;
+        currentStatus = (-1 * currentStatus);
     }
 
     //execute button
