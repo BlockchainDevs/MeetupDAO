@@ -11,18 +11,67 @@
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/responsive.css">
 
+  <style media="screen">
+    .modal {
+      width: 400px;
+      height: 300px;
+      padding: 10px 0;
+    }
+
+    .modal h4 {
+      font-size: 24px;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .modal .row {
+      margin: 10px 0 !important;
+    }
+
+    .modal input {
+      color: #000 !important;
+    }
+
+    .modal .btn {
+      margin: 10px 0 !important;
+      margin-left: 60px !important;
+      background-color: rgb(92, 11, 99) !important;
+    }
+
+    .pop-up-close .material-icons {
+      position: relative;
+      top: -50px !important;
+      font-size: 40px;
+    }
+
+    @media (max-width : 440px) {
+      .modal {
+        width: 300px;
+        height: 260px;
+        padding: 10px 0;
+        overflow: hidden;
+      }
+      .modal .btn {
+        margin-top : 5px !important;
+        margin-left: 70px !important;
+      }
+
+          
+    }
+  </style>
+
   <!--Import js files-->
   <script type="text/javascript" src="./abi.js"></script>
-  <script type="text/javascript"> 
-    function becomeMember(){
-      var memberName= prompt("Enter Your Name here! ");
-      // var memberName = prompt("Enter Name");
+  <script type="text/javascript">
+    function becomeMember() {
+      var memberName = document.getElementById("joindao").value;
+      //  alert(memberName);
       var myTokenContract = web3.eth.contract(abi).at(address);
       console.log(myTokenContract);
-      return myTokenContract.becomeMember(memberName, function (error, result) {})
-     
-      }
-    </script>
+      return myTokenContract.becomeMember(memberName, function(error, result) {})
+
+    }
+  </script>
 
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,8 +79,9 @@
 
 <body>
 
-  <!-- navbar section -->
+  <!-- Pop Up Form -->
 
+  <!-- End of the Pop Up Form  -->
 
   <!-- end of the navbar section -->
 
@@ -66,8 +116,8 @@
             <div class="header-1">
               <p>Not Long to Go ...</p>
               <h3 class="type">Build a Community on Blockchain.</h3>
-              <button type="button" class="waves-effect waves-light btn btn-1 lighten-1 z-depth-4" onclick="becomeMember();">Join Us</button>
-              
+              <button type="button" data-target="modal1" class="waves-effect waves-light btn btn-1 lighten-1 z-depth-4 modal-trigger">Join Us</button>
+
               <button type="button" class="waves-effect waves-light btn btn-2 lighten-1 z-depth-4">Lear more</button>
             </div>
           </div>
@@ -90,7 +140,8 @@
         <div class="col s12 info-col">
           <p>In the Ethereum ecosystem, there is no discrimination against robots or humans and contracts can create arbitrary actions like any other account would. Contracts can own tokens, participate in crowdsales, and even be voting members of other
             contracts. DAO is a business or organization whose decisions are made electronically by a written computer code or through the vote of its members. In essence it is a system of hard coded rules that define which actions an organization will
-            take</p>
+            take
+          </p>
           <p>DAOs aim to hard-code certain rules that a company would from the get-go. This could be setting aside a certain percentage of earnings for a cause or determining a process by which such a rule could be changed.</p>
         </div>
       </div>
@@ -210,7 +261,7 @@
           <strong><p>+91 XXXXXXXXXX<p></strong><br>
 
           <span>Mail Us</span>
-           <i class=" material-icons left">email</i>
+          <i class=" material-icons left">email</i>
           <strong><p>meetup.gmail.com</p></strong>
         </div>
 
@@ -219,7 +270,7 @@
             <form class="col s12">
               <div class="row">
                 <div class="input-field col s6">
-                  <input  id="first_name" type="text" class="validate">
+                  <input id="first_name" type="text" class="validate">
                   <label for="first_name">First Name</label>
                 </div>
 
@@ -247,26 +298,48 @@
     </div>
   </section>
 
-<!-- End of the section contact us -->
+  <!-- End of the section contact us -->
 
-<!-- start od the section footer  -->
+  <!-- start od the section footer  -->
 
-<footer class="footer">
-  <div class="container bar">
-    <p>&copy; 2018 Meetup DAO all rights reserved by</p>
-  </div>
-</footer>
-
-
+  <footer class="footer">
+    <div class="container bar">
+      <p>&copy; 2018 Meetup DAO all rights reserved by</p>
+    </div>
+  </footer>
 
 
-  <!--Import jQuery before materialize.js-->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-  <script src="js/particles.min.js"></script>
-  <script src="js/custom.js"></script>
-  <script src="js/scrollAnimation.js"></script>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Join Now</h4>
+      <div class="pop-up-close">
+        <i class="material-icons modal-close right">close</i>
+      </div>
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12 m8 l8 offset-m2 offset-l2">
+            <input id="joindao" type="text" class="validate">
+            <label for="first_name">Your Name</label>
+            <button type='submit' class='btn waves-effect waves-light large' onclick="becomeMember();">Send</button>
+          </div>
+      </form>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/scrollAnimation.js"></script>
 
 </body>
 

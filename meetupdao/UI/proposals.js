@@ -1,11 +1,9 @@
 
 function newProposalInEther(){
-
       var beneficiary=document.getElementById("beneficiary").value;
       var etherAmount=document.getElementById("etherAmount").value;
       var jobDescription=document.getElementById("jobDescription").value;
       var transactionBytecode=document.getElementById("transactionBytecode").value;
-
       var myTokenContract = web3.eth.contract(abi).at(address);
       return myTokenContract.newProposalInEther(beneficiary, etherAmount, jobDescription, transactionBytecode, function (error, result) {})
 
@@ -13,12 +11,8 @@ function newProposalInEther(){
 
 
 function executeProposal(proposalNumberValue){
-	
-	//	console.log("function successfully loladed");
-   // var proposalNumber=document.getElementById("proposalNumber").value;
     var proposalNumber = proposalNumberValue;
     var transactionBytecode=document.getElementById("transactionBytecode").value;
-
     var myTokenContract = web3.eth.contract(abi).at(address);
     return myTokenContract.executeProposal(proposalNumber, transactionBytecode, function (error, result) {}) 
 
@@ -26,7 +20,6 @@ function executeProposal(proposalNumberValue){
 
 
   function vote(proposalNumberValue){
-
     var proposalNumber = proposalNumberValue;
     var idYes = "supportsProposal_" + proposalNumber + "_yes";
     var idNo  = "supportsProposal_" + proposalNumber + "_no";
@@ -36,10 +29,9 @@ function executeProposal(proposalNumberValue){
     if(yes==true)
       var supportsProposal = 1;
     else if(no==true)
-      var supportsProposal = -1;
-    
+	  var supportsProposal = -1;
+	      
     var justificationText=document.getElementById(idJustificationText).value;
-
     var myTokenContract = web3.eth.contract(abi).at(address);
     return myTokenContract.vote(proposalNumber, supportsProposal, justificationText, function (error, result) {})    
   }
@@ -85,13 +77,15 @@ function getProposals(){
 	    newDiv.innerHTML = input;
     	while (newDiv.firstChild) {
        		mydiv.appendChild(newDiv.firstChild);
-       	}
-			
+		   }
+		   		
 	
 		})
 	 }
-	})
-	
+	})	
 }
-
 getProposals();
+
+function homenav(){
+	location.href ="./index.html";
+}
