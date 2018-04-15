@@ -15,11 +15,12 @@
 
      	 	var beneficiary=document.getElementById("beneficiary").value;
       		var etherAmount=document.getElementById("etherAmount").value;
+		var proposalTime=document.getElementById("proposalTime").value;
       		var jobDescription=document.getElementById("jobDescription").value;
       		var transactionBytecode=document.getElementById("transactionBytecode").value;
 		
 		    var myTokenContract = web3.eth.contract(abi).at(address);
-      		return myTokenContract.newProposalInEther(beneficiary, etherAmount, jobDescription, fileHash, transactionBytecode, function (error, result) {})
+      		return myTokenContract.newProposalInEther(beneficiary, etherAmount, proposalTime, jobDescription, fileHash, transactionBytecode, function (error, result) {})
 
     
     }
