@@ -1,5 +1,5 @@
 # MeetupDAO
-Open **https://github.com/BlockchainDevs/MeetupDAO**
+Open **https://blockchaindevs.github.io/MeetupDAO**
 
 # Instructions to Run
 
